@@ -1,14 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Fun</title>
+  <title>4FUN</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
-
+  <div id="wrapper">
+    <header>
+      <%= render 'pages/nav' %>
+    </header>
+    <section class="container">
+      <%= yield %>
+    </section>
+    <footer id="footer-wrapper">
+    <%= render 'pages/footer' %>
+    </footer>
+  <div id="copyright" class="container"><p>&copy; 2014 ChenLiZhan</p></div>
 </body>
 </html>
